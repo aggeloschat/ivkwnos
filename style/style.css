@@ -224,7 +224,7 @@ nav .button-container {
 
 /* Contact Section */
 #contact {
-    background:rgba(17,17,17,0.5);
+    /* background:rgba(17,17,17,0.5); */
     margin-top:10px;
     padding-top:50px;
     padding-bottom:20px;
@@ -278,8 +278,13 @@ nav .button-container {
 footer {
     text-align: center;
     padding: 2rem 0;
+    margin-top:10px;
     /* background: var(--secondary); */
-    background:rgba(17,17,17,0.5);
+    background:#ffffff;
+}
+
+.footer-font{
+  color:black;
 }
 
 .social-links a {
