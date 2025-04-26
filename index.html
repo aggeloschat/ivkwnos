@@ -1,102 +1,116 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κώστας Ίβρος</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κώστας Ίβρος</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Tangerine:wght@400;700&family=WindSong:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> -->
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Iv Kwnos</a>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-            <ul class="nav-links">
-                <li><a href="#about">Σχετικά</a></li>
-                <li><a href="#gallery">Πορτφόλιο</a></li>
-                <li><a href="#contact">Επικοινωνία</a></li>
-            </ul>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo-container">
+        <a href="#" class="logo">IVROS KONSTANTINOS</a>
+      </div>
+      <div class="button-container">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 data-aos="fade-up"></h1>
+      <p data-aos="fade-up" data-aos-delay="200"></p>
+      <div class="scroll-down" data-aos="fade-up" data-aos-delay="400">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 data-aos="fade-up">Σχετικά με Εμένα</h2>
+      <div class="about-content">
+        <img src="images/profile.jpg" alt="Κωνσταντίνος Ίβρος" class="profile-img" data-aos="fade-right">
+        <div class="about-text" data-aos="fade-left">
+          <!-- <p>Είμαι φωτογράφος με πάθος για τη φύση, τις πεζοπορίες και τη μαγεία των βουνών. Αγαπώ τη λεπτομέρεια, το φυσικό φως και την αυθεντικότητα που βρίσκω στον Φακό και στα βουνά της Ελλάδας.</p> -->
+          <!-- <p>Με μια μοναδική ματιά, προσπαθώ να καταγράψω στιγμές που μιλούν από μόνες τους.</p> -->
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1 data-aos="fade-up">Κώστας Ίβρος</h1>
-            <p data-aos="fade-up" data-aos-delay="200">Φωτογραφία Βουνού & Φύσης</p>
-            <div class="scroll-down" data-aos="fade-up" data-aos-delay="400">
-                <span></span>
-            </div>
+  <!-- Gallery Section -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 data-aos="fade-up">Πορτφόλιο</h2>
+      <div class="gallery-grid">
+        <!-- Photos loaded via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 data-aos="fade-up">Επικοινωνία</h2>
+      <form id="contact-form" data-aos="fade-up">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Όνομα" required>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 data-aos="fade-up">Σχετικά με Εμένα</h2>
-            <div class="about-content">
-                <img src="images/profile.jpg" alt="Κωνσταντίνος Ίβρος" class="profile-img" data-aos="fade-right">
-                <div class="about-text" data-aos="fade-left">
-                    <!-- <p>Είμαι φωτογράφος με πάθος για τη φύση, τις πεζοπορίες και τη μαγεία των βουνών. Αγαπώ τη λεπτομέρεια, το φυσικό φως και την αυθεντικότητα που βρίσκω στον Φακό και στα βουνά της Ελλάδας.</p> -->
-                    <!-- <p>Με μια μοναδική ματιά, προσπαθώ να καταγράψω στιγμές που μιλούν από μόνες τους.</p> -->
-                </div>
-            </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required>
         </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <div class="container">
-            <h2 data-aos="fade-up">Πορτφόλιο</h2>
-            <div class="gallery-grid">
-                <!-- Photos loaded via JS -->
-            </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Μήνυμα" required></textarea>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 data-aos="fade-up">Επικοινωνία</h2>
-            <form id="contact-form" data-aos="fade-up">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Όνομα" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Μήνυμα" required></textarea>
-                </div>
-                <button type="submit" class="cta-button">Αποστολή</button>
-            </form>
-        </div>
+        <button type="submit" class="cta-button">Αποστολή</button>
+      </form>
+    </div>
 
 
-    </section>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Konstantinos Ivros</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-500px"></i></a>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Konstantinos Ivros</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-500px"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
-    </button>
+  <!-- <!-- Dark Mode Toggle -->
+  <!-- <button id="dark-mode-toggle" class="dark-mode-toggle"> -->
+  <!--   <i class="fas fa-moon"></i> -->
+  <!-- </button> -->
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script/script.js"></script>
 </body>
+
 </html>

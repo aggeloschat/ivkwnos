@@ -1,15 +1,17 @@
 /* Modern Reset & Variables */
-:root {
-    --primary: #2a5c3d;
-    --secondary: #e0e0e0;
-    --bg: #fafafa;
-    --text: #333333;
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+/* :root { */
+/*     --primary: #ffffff; */
+/*     --secondary: #e0e0e0; */
+/*     --bg: #000000; */
+/*     --text: #333333; */
+/*     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
+/* } */
 
-.dark-mode {
-    --bg: #121212;
+:root {
+    --primary: #ffffff;
+    --bg: #000000;
     --text: #f0f0f0;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     --secondary: #333333;
 }
 
@@ -38,7 +40,8 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    /* background: rgba(255, 255, 255, 0.9); */
+    backgrounds:#111111;
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -50,29 +53,49 @@ nav {
 }
 
 nav .container {
+    position:relative;
+    height:2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+nav .logo-container {
+    position:absolute;
+    white-space:nowrap;
+    width:100;
+    right:93%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .button-container {
+    position:absolute;
+    white-space:nowrap;
+    left:95%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-family: 'Bodoni Moda',serif;
+    font-weight: 100;
+    font-size: 1.8rem;
     color: var(--primary);
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
-    list-style: none;
+    /* list-style: none; */
     gap: 2rem;
 }
 
 .nav-links a {
     color: var(--text);
     text-decoration: none;
-    font-weight: 500;
+    font: 'Bodoni Mode',serif;
+    font-weight: 100;
     transition: var(--transition);
 }
 
@@ -200,7 +223,10 @@ nav .container {
 
 /* Contact Section */
 #contact {
-    background: var(--secondary);
+    background:rgba(17,17,17,0.5);
+    margin-top:10px;
+    padding-top:50px;
+    padding-bottom:20px;
 }
 
 .form-group {
@@ -251,7 +277,8 @@ nav .container {
 footer {
     text-align: center;
     padding: 2rem 0;
-    background: var(--secondary);
+    /* background: var(--secondary); */
+    background:rgba(17,17,17,0.5);
 }
 
 .social-links a {
@@ -281,17 +308,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    flont-size: 1.2rem;
     transition: var(--transition);
 }
-
+      i
 .dark-mode-toggle:hover {
     transform: scale(1.1);
-}
+}     n
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hamburger {
+    .khamburger {
         display: block;
     }
 
