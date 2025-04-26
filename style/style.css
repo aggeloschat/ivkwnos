@@ -39,6 +39,7 @@ body {
 /* Navigation */
 nav {
     position: fixed;
+    display:flex;
     width: 100%;
     /* background: rgba(255, 255, 255, 0.9); */
     backgrounds:#111111;
@@ -64,7 +65,7 @@ nav .logo-container {
     position:absolute;
     white-space:nowrap;
     width:100;
-    right:93%;
+    right:69rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -72,7 +73,7 @@ nav .logo-container {
 nav .button-container {
     position:absolute;
     white-space:nowrap;
-    left:95%;
+    left:73rem;
     justify-content: space-between;
     align-items: center;
 }
