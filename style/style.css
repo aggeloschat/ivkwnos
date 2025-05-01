@@ -21,7 +21,12 @@
     box-sizing: border-box;
 }
 
+html{
+  overflow-x:hidden;
+}
+
 body {
+    overflow-x:hidden;
     font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
@@ -73,7 +78,7 @@ nav .logo-container {
 nav .button-container {
     position:absolute;
     white-space:nowrap;
-    left:73rem;
+    left:70rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -88,7 +93,7 @@ nav .button-container {
 
 .nav-links {
     display: flex;
-    /* list-style: none; */
+    list-style: none;
     gap: 2rem;
 }
 
@@ -367,4 +372,67 @@ footer {
 [data-aos].aos-animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* custom */
+.menu-bullet li::before{
+  content:'◇ ';
+}
+
+.gallery-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap; /* important */
+}
+
+
+
+ /* Gallery Container */
+.gallery-container {
+    width: fit-content;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+/* here */
+
+.gallery {
+  width: fit-content;         /* Make the gallery full width */
+  overflow-x: auto;    /* Allow horizontal scroll only inside gallery */
+  overflow-y: hidden;  /* No vertical scroll inside gallery */
+  white-space: nowrap; /* Make all slides stay in one horizontal line */
+  scroll-behavior: smooth;
+  cursor: grab;
+  display: flex;
+  padding: 20px 0;
+  user-select: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 300px; /* or whatever size you want */
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test{
+  width:1000px;
+  height:900px;
 }

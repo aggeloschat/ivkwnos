@@ -22,9 +22,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Gallery Data (Replace with your images)
 const galleryData = [
-  { src: 'images/gallery/photo1.jpg', title: 'Βουνό Σμόλικας' },
-  { src: 'images/gallery/photo2.jpg', title: 'Πεζοπορία' },
-  { src: 'images/gallery/photo3.jpg', title: 'Λεπτομέρεια' },
+  { src: '../images/home/701_3681.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6051.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
+  { src: '../images/home/IMG_6495.jpg', title: 'IMAGE' },
   // Add more photos here
 ];
 
@@ -94,4 +103,41 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   } else {
     alert('Συμπλήρωσε όλα τα πεδία!');
   }
+});
+
+
+const gallery = document.getElementById('gallery');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+gallery.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - gallery.offsetLeft;
+  scrollLeft = gallery.scrollLeft;
+  gallery.style.cursor = 'grabbing'; // change cursor while dragging
+});
+
+gallery.addEventListener('mouseleave', () => {
+  isDown = false;
+  gallery.style.cursor = 'grab';
+});
+
+gallery.addEventListener('mouseup', () => {
+  isDown = false;
+  gallery.style.cursor = 'grab';
+});
+
+gallery.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - gallery.offsetLeft;
+  const walk = (x - startX) * 1.5; // speed
+  gallery.scrollLeft = scrollLeft - walk;
+});
+
+// 🛑 Prevent dragging images
+gallery.querySelectorAll('img').forEach(img => {
+  img.addEventListener('dragstart', (e) => e.preventDefault());
 });
